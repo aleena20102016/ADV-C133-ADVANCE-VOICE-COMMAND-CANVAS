@@ -5,7 +5,7 @@ draw_apple = "";
 screen_width = 0;
 screen_height = 0;
 apple = "";
-to_number = "";
+to_number = 0;
 speak_data = "";
 
 function preload()
@@ -56,8 +56,8 @@ function draw() {
 
     for(var i = 1; i <= to_number; i++)
     {
-      x = Math.floor(Math.random * 700);
-      y = Math.floor(Math.random * 400);
+      x = Math.floor(Math.random() * 700);
+      y = Math.floor(Math.random() * 400);
       image(apple,  x, y, 50, 50);
     }
     document.getElementById("status").innerHTML = to_number + " Apples drawn";
